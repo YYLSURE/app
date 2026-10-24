@@ -1,0 +1,305 @@
+@use '@/styles/variables.scss' as *;
+
+.container {
+  min-height: 100vh;
+  background: $color-bg-page;
+  padding-bottom: 240rpx;
+}
+
+// 头图
+.hero {
+  position: relative;
+  width: 100%;
+  height: 520rpx;
+  background: $color-bg-hover;
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+}
+
+.heroMask {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 120rpx 40rpx 40rpx;
+  background: linear-gradient(180deg, rgba(63, 68, 65, 0) 0%, rgba(63, 68, 65, 0.62) 100%);
+}
+
+.heroRegion {
+  display: block;
+  font-size: $font-size-sm;
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: 4rpx;
+  margin-bottom: 12rpx;
+}
+
+.heroName {
+  display: block;
+  font-size: 56rpx;
+  font-weight: $font-weight-semibold;
+  color: $color-text-white;
+  letter-spacing: 2rpx;
+}
+
+.tagRow {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20rpx;
+}
+
+.heroTag {
+  height: 44rpx;
+  line-height: 44rpx;
+  padding: 0 20rpx;
+  margin-right: 16rpx;
+  margin-bottom: 8rpx;
+  border-radius: $radius-round;
+  background: rgba(255, 255, 255, 0.22);
+  font-size: $font-size-xs;
+  color: #ffffff;
+}
+
+// 通用卡片
+.card {
+  margin: 24rpx $spacing-xl 0;
+  padding: 40rpx 32rpx;
+  background: $color-bg-card;
+  border-radius: $radius-xl;
+  box-shadow: $shadow-card;
+}
+
+.cardTitleRow {
+  display: flex;
+  align-items: center;
+  margin-bottom: 28rpx;
+}
+
+.titleBar {
+  width: 8rpx;
+  height: 32rpx;
+  border-radius: $radius-round;
+  background: $color-primary;
+  margin-right: 16rpx;
+}
+
+.cardTitle {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+}
+
+.cardSubTitle {
+  margin-left: 16rpx;
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+}
+
+.summaryText {
+  display: block;
+  font-size: $font-size-md;
+  line-height: $line-height-loose;
+  color: $color-text-secondary;
+}
+
+// 匹配原因
+.matchItem {
+  display: flex;
+  & + & {
+    margin-top: 32rpx;
+  }
+}
+
+.matchBadge {
+  flex-shrink: 0;
+  width: 64rpx;
+  height: 64rpx;
+  border-radius: $radius-round;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20rpx;
+}
+
+.matchBadgeText {
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+}
+
+.matchBody {
+  flex: 1;
+}
+
+.matchLabel {
+  display: block;
+  font-size: $font-size-md;
+  font-weight: $font-weight-medium;
+  color: $color-text-primary;
+  margin-bottom: 8rpx;
+}
+
+.matchText {
+  display: block;
+  font-size: $font-size-sm;
+  line-height: $line-height-loose;
+  color: $color-text-secondary;
+}
+
+// 攻略：景点
+.spotItem {
+  display: flex;
+  align-items: center;
+  padding: 20rpx 0;
+
+  & + & {
+    border-top: 2rpx solid $color-divider;
+  }
+}
+
+.spotImage {
+  flex-shrink: 0;
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: $radius-md;
+  background: $color-bg-hover;
+}
+
+.spotBody {
+  flex: 1;
+  margin-left: 24rpx;
+  overflow: hidden;
+}
+
+.spotName {
+  display: block;
+  font-size: $font-size-md;
+  font-weight: $font-weight-medium;
+  color: $color-text-primary;
+  margin-bottom: 8rpx;
+}
+
+.spotDesc {
+  display: block;
+  font-size: $font-size-sm;
+  line-height: $line-height-normal;
+  color: $color-text-tertiary;
+  @include text-ellipsis-multi(2);
+}
+
+// 攻略：标签组
+.guideGroup {
+  margin-top: 32rpx;
+}
+
+.guideLabel {
+  display: block;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+  color: $color-text-primary;
+  margin-bottom: 16rpx;
+}
+
+.pillRow {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pill {
+  padding: 10rpx 24rpx;
+  margin: 0 16rpx 16rpx 0;
+  border-radius: $radius-round;
+  font-size: $font-size-sm;
+}
+
+// 攻略：出行建议
+.tipsBox {
+  margin-top: 32rpx;
+  padding: 24rpx 28rpx;
+  border-radius: $radius-lg;
+}
+
+.tipsText {
+  display: block;
+  font-size: $font-size-sm;
+  line-height: $line-height-loose;
+  color: $color-text-secondary;
+}
+
+// 底部操作区
+.actionBar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: $shadow-float;
+  padding: 20rpx 32rpx;
+  padding-bottom: calc(20rpx + env(safe-area-inset-bottom));
+}
+
+.actionRow {
+  display: flex;
+  gap: 24rpx;
+}
+
+.shareButton {
+  @include button-reset;
+  flex: 1;
+  height: 88rpx;
+  background: $color-bg-card;
+  border: 2rpx solid $color-primary;
+  border-radius: $radius-button;
+
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+.shareButtonText {
+  font-size: $font-size-md;
+  font-weight: $font-weight-medium;
+  color: $color-primary;
+}
+
+.saveButton {
+  @include button-reset;
+  flex: 1;
+  height: 88rpx;
+  background: $color-primary;
+  border: 2rpx solid $color-primary;
+  border-radius: $radius-button;
+
+  &:active {
+    opacity: 0.88;
+    transform: scale(0.98);
+  }
+}
+
+.saveButtonText {
+  font-size: $font-size-md;
+  font-weight: $font-weight-medium;
+  color: $color-text-white;
+}
+
+.retakeButton {
+  @include button-reset;
+  width: 100%;
+  height: 64rpx;
+  margin-top: 8rpx;
+  background: transparent;
+  border: none;
+}
+
+.retakeButtonText {
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+}
+
+// 离屏海报画布
+.posterCanvas {
+  position: fixed;
+  left: -2000px;
+  top: 0;
+}

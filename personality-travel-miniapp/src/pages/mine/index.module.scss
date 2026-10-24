@@ -1,0 +1,188 @@
+@use '@/styles/variables.scss' as *;
+
+.container {
+  min-height: 100vh;
+  background: $color-bg-page;
+  padding: 48rpx $spacing-xl 64rpx;
+}
+
+.header {
+  margin-bottom: 40rpx;
+}
+
+.headerTitle {
+  display: block;
+  font-size: 48rpx;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+}
+
+.headerSub {
+  display: block;
+  margin-top: 12rpx;
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+  letter-spacing: 2rpx;
+}
+
+// 档案卡片
+.recordCard {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 24rpx;
+  margin-bottom: 24rpx;
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-card;
+  transition: all $transition-fast;
+
+  &:active {
+    opacity: 0.85;
+    transform: scale(0.99);
+  }
+}
+
+.recordThumb {
+  flex-shrink: 0;
+  width: 104rpx;
+  height: 104rpx;
+  border-radius: $radius-md;
+  background: $color-bg-hover;
+}
+
+.recordBody {
+  flex: 1;
+  margin-left: 24rpx;
+  overflow: hidden;
+}
+
+.recordName {
+  display: block;
+  font-size: $font-size-md;
+  font-weight: $font-weight-medium;
+  color: $color-text-primary;
+  margin-bottom: 8rpx;
+  @include text-ellipsis;
+}
+
+.recordMeta {
+  display: block;
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+}
+
+.recordDate {
+  display: block;
+  font-size: $font-size-xs;
+  color: $color-text-disabled;
+  margin-top: 8rpx;
+}
+
+.recordArrow {
+  flex-shrink: 0;
+  margin-left: 16rpx;
+  font-size: 36rpx;
+  color: $color-text-disabled;
+}
+
+// 空状态
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 120rpx 0 80rpx;
+}
+
+.emptyCircle {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: $radius-round;
+  background: $color-bg-soft;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40rpx;
+}
+
+.emptyIcon {
+  font-size: 72rpx;
+}
+
+.emptyTitle {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-medium;
+  color: $color-text-secondary;
+  margin-bottom: 12rpx;
+}
+
+.emptyDesc {
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+  margin-bottom: 48rpx;
+}
+
+.emptyButton {
+  @include button-reset;
+  width: 360rpx;
+  height: $button-height-md;
+  background: $color-primary;
+  border-radius: $radius-button;
+
+  &:active {
+    opacity: 0.88;
+    transform: scale(0.98);
+  }
+}
+
+.emptyButtonText {
+  font-size: $font-size-md;
+  font-weight: $font-weight-medium;
+  color: $color-text-white;
+}
+
+// 底部操作
+.footerActions {
+  margin-top: 16rpx;
+}
+
+.menuCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 104rpx;
+  padding: 0 32rpx;
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-card;
+  transition: all $transition-fast;
+
+  &:active {
+    opacity: 0.85;
+  }
+}
+
+.menuLabel {
+  font-size: $font-size-md;
+  color: $color-text-primary;
+}
+
+.menuArrow {
+  font-size: 32rpx;
+  color: $color-text-disabled;
+}
+
+.clearButton {
+  @include button-reset;
+  width: 100%;
+  height: 96rpx;
+  margin-top: 32rpx;
+  background: transparent;
+  border: none;
+}
+
+.clearButtonText {
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+}

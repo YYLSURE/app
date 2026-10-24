@@ -1,0 +1,113 @@
+@use '@/styles/variables.scss' as *;
+
+.container {
+  min-height: 100vh;
+  background: $color-bg-page;
+  padding: 64rpx $spacing-xl;
+}
+
+.brandCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 64rpx 40rpx;
+  background: $color-bg-card;
+  border-radius: $radius-xl;
+  box-shadow: $shadow-card;
+}
+
+.brandMark {
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 36rpx;
+  background: $color-primary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 28rpx;
+}
+
+.brandMarkText {
+  font-size: 56rpx;
+  color: $color-text-white;
+  font-weight: $font-weight-semibold;
+}
+
+.brandName {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+}
+
+.brandVersion {
+  margin-top: 12rpx;
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+}
+
+.introCard {
+  margin-top: 24rpx;
+  padding: 40rpx 32rpx;
+  background: $color-bg-card;
+  border-radius: $radius-xl;
+  box-shadow: $shadow-card;
+}
+
+.introTitle {
+  display: block;
+  font-size: $font-size-md;
+  font-weight: $font-weight-medium;
+  color: $color-text-primary;
+  margin-bottom: 16rpx;
+}
+
+.introText {
+  display: block;
+  font-size: $font-size-sm;
+  line-height: $line-height-loose;
+  color: $color-text-secondary;
+}
+
+.featureList {
+  margin-top: 24rpx;
+  padding: 8rpx 32rpx;
+  background: $color-bg-card;
+  border-radius: $radius-xl;
+  box-shadow: $shadow-card;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  height: 96rpx;
+  border-bottom: 2rpx solid $color-divider;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.featureDot {
+  width: 12rpx;
+  height: 12rpx;
+  border-radius: $radius-round;
+  background: $color-primary;
+  margin-right: 20rpx;
+}
+
+.featureText {
+  font-size: $font-size-md;
+  color: $color-text-secondary;
+}
+
+.footer {
+  margin-top: 64rpx;
+  text-align: center;
+}
+
+.footerText {
+  display: block;
+  font-size: $font-size-xs;
+  color: $color-text-disabled;
+  line-height: $line-height-loose;
+}
